@@ -1,0 +1,1 @@
+Client --> ISP(Onternet Service Provider) --> DNS(IP od Server)

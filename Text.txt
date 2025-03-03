@@ -1,0 +1,78 @@
+git config --list # It will show the local config file
+git --version # fetch the git version
+clone -> Cloning a file in local machine
+git clone <-link->
+local -{laptop/pc}
+remote -{github}
+Status -> display status of a code
+git status
+ls -a # so see hidden files
+
+----------------------------------------------------------------------------------------
+Steps to perform after modifying a file
+Unmodified -> changed -> Modified(This file is to be added) -> (Add) -> Staged -> (commit) -> Commited(Unmodified)
+1st - Add ->Add new file in working directory/ Git Staging Area
+ git add <-File Name->
+ git add . {Add add all files}
+2nd - Commit ->It is the record of change
+ git commit -m"some message"
+Untracked File - Files that git doesn't track (new File)
+Modified - Files that have been modified (changed)
+Staged -  Files that are ready to be commited (changes have been added)
+Commit - No more changes to be added
+Unmodified - Intial file (no files have been changed)
+
+---------------------------------------------------------------------------------------------------------
+Push Command
+push - upload local repo content to remote repo
+git push origin main
+{git push} -> Basic command
+All of our github repos are remote repo, 
+from these remote repo we fetch a default repo from which we had made a clone of it in our local repo,
+This default reporitory has a default name origin. 
+The remote github Repository is named as orgin(by default)
+We are trying to commit changes in a branch named as main
+
+------------------------------------------------------------------------------------------------------------------------------
+WHEN WE WANT TO MAKE REPO IN OUR LOCAL 
+init -> used to create a new git repo
+git init
+git remote add origin <-link-> {Add a new remote repo named as origin}
+git remote -v {To verify remote repository}
+git branch {To check current branch}
+git branch -M <-name-> {to rename the branch}
+git push -u origin main {We are going to create future pushes in origin(repository) and main(branch)}
+
+
+Githud repo(crate a repo) -> clone(clone it in local) -> changes(work) -> add -> commit -> push(git remote add origin https://github.com/SanskarPandey1510/Local1.git  , git push origin main)  
+
+------------------------------------------------------------------------------------------------------------------------------ 
+ GIT BRANCHES
+git branch {To check current branch}
+git branch -M <-name-> {to rename the branch}
+git checkout <-branch name-> {to navigate between branches}
+git checkout -b <-new branch name-> {to create new branch}
+git branch -d <-branch name-> {delete branch}
+
+------------------------------------------------------------------------------------------------------------------------------ 
+Merging branches
+git diff <-branch name-> {To compare commits/Branches?Files and more}
+git merge <-branch name-> {To merge 2 branches}
+Using github to merge ->Pull Request(PR) ->{Let you tell other about the changes you have done in git repository}
+git pull origin main {use to fetch and download content from remote repo and immediately update the local repo to match the content}  
+MERGE CONFLICTS -> When there is difference in content of branches which raise ambiguity during merge operation
+
+------------------------------------------------------------------------------------------------------------------------------ 
+UNDOING CHANGES
+1-> Staged Changes
+ git reset <-file name->
+ git reset {all files reset}
+2-> Commited Change(for one commit)
+ git reset Head~1
+3-> Commited Changes (For many commits)
+ git reset <-commit hash->
+ git reset --hard <-commit hash->
+git log -> See all the changes along with hash{Remove all the changes made after commit in Vscode}
+
+------------------------------------------------------------------------------------------------------------------------------ 
+Fork -> It is a new repository which is rough copy od original
